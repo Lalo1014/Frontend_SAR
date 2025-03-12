@@ -1,0 +1,198 @@
+:host{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--white);
+}
+
+
+.login-container{
+    background-color: var(--white);
+    padding: 5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 30px var(--shadow);
+    width: 90%;
+    max-width: 45rem;
+    margin: 2rem;
+    position: relative;
+    z-index: 1;
+    border-left: 5px solid var(--primary-blue);
+}
+
+.login-header{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.login-icon{
+    width: 6rem;
+    height: 6rem;
+    margin: 0 auto 1rem;
+    background: linear-gradient(90deg, var(--primary-blue), var(--primary-blue-light));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+fa-icon{
+    font-size: 1.7rem;
+    color: var(--white);
+}
+
+.login-header h1 {
+    font-size: 3rem;
+    color: var(--primary-dark);
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+}
+
+.login-header h1::after{
+
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-blue), var(--primary-blue-light));
+    border-radius: 2px;
+}
+
+.login-header p{
+    color: var(--text-secondary);
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+
+.form-group{
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.form-group input{
+    width: 100%;
+    padding: 1.4rem 1.8rem 1.4rem 4.5rem;
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    background: var(--background);
+    font-size: 1.4rem;
+    color: var(--primary-dark);
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus{
+    outline: none;
+    border-color: var(--primary-blue);
+    background: var(--white);
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+}
+
+.form-group .input-icon{
+    position: absolute;
+    left: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+}
+
+
+.form-group label{
+    position: absolute;
+    left: 4.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+    background-color: transparent;
+    padding: 0 .6rem ;
+}
+
+
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label{
+    top: -12px;
+    left: 12px;
+    font-size: 1rem;
+    color: var(--primary-blue);
+    background-color: var(--white);
+}
+
+.form-group input:focus ~ .input-icon{
+    color: var(--primary-blue);
+}
+
+.form-group .toggled-password{
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    transform: translateY(-50%);
+    font-size: 1.8rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.form-group .toggled-password:hover{
+    color: var(--primary-blue);
+}
+
+.login-button{
+    width: 100%;
+    padding: 1.4rem;
+    border: none;
+    border-radius: 1rem;
+    background: linear-gradient(90deg, var(--primary-blue), var(--primary-blue-light));
+    color: var(--white);
+    font-size: 1.4rem;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.login-button::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: width 0.5s ease, height 0.5s ease;
+
+}
+
+.login-button:hover::before{
+    width: 300px;
+    height: 300px;
+}
+
+.login-button:hover{
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);;
+}
+
+.forgot-password{
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.forgot-password a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.forgot-password a:hover{
+    text-decoration: underline;
+}

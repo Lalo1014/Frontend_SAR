@@ -1,0 +1,38 @@
+<div class="login-container">
+    <div class="login-header">
+        <div class="login-icon">
+            <!-- icono de usuario -->
+            <fa-icon [icon]="faUser"></fa-icon>
+        </div>
+        <h1>SAR</h1>
+        <p>Inicia sesión para continuar</p>
+    </div>
+
+    <form action="" id="login-form">
+        <div class="form-group">
+            <input type="email" id="username" placeholder="" required>
+            <label for="username">Email</label>
+            <!-- icono usuario -->
+            <fa-icon [icon]="faUser" class="input-icon"></fa-icon>
+        </div>
+
+        <div class="form-group">
+            <input [type]="mostrar ? 'text': 'password'" id="password" placeholder="" maxlength="16" required>
+            <label for="password">Password</label>
+            <!-- icono candado -->
+            <fa-icon [icon]="faLock" class="input-icon"></fa-icon>
+            <!-- icono visualizar password -->
+            <fa-icon
+            [icon]="mostrar ? faEyeSlash : faEye" 
+            (click) = "toggleIcon()"
+            class="toggled-password"></fa-icon>
+        </div>
+
+        <button (click)="iniciarSesion()" type="submit" class="login-button">Iniciar Sesión</button>
+
+        <div class="forgot-password">
+            <a>¿Olvidaste tu contraseña?</a>
+        </div>
+
+    </form>
+</div>

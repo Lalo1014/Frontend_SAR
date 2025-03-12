@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+    --primary-dark: #2c3e50;    /* Texto principal */
+    --primary-blue: #3498db;    /* Azul principal */
+    --primary-blue-light: #74b9ff; /* Azul claro */
+    --danger: #e74c3c;          /* Rojo para eliminar/logout */
+    --danger-dark: #c0392b;     /* Rojo oscuro para hover */
+    --background: #FAFAFA;      /* Fondo área de contenido */
+    --white: #ffffff;           /* Fondo blanco */
+    --border: #dfe6e9;          /* Bordes y líneas */
+    --text-secondary: #7F8C8D;  /* Texto secundario */
+    --shadow: rgba(0, 0, 0, 0.1); /* Sombra general */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html{
+    font-size: 10px;
+}
